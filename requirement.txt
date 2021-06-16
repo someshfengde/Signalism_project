@@ -1,2 +1,2 @@
-transformers==4.7.0.dev0
+transformers==4.6.1
 streamlit==0.82.0
