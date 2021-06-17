@@ -1,5 +1,5 @@
 from transformers import TFGPT2LMHeadModel, GPT2Tokenizer
-
+# import tensorflow as tf
 
 def get_token(path):
     load_token = GPT2Tokenizer.from_pretrained(path)
@@ -8,6 +8,7 @@ def get_token(path):
 
 def load_model(path):
     load_model = TFGPT2LMHeadModel.from_pretrained(path)
+    # load_model = tf.keras.models.load_model('/model')
     return load_model
 
 
@@ -19,7 +20,7 @@ def make_predictions(scentence):
                             max_length=1000,
                             top_k=30,
                             num_beams=5)
-    actual_scentence = tokenizer.decode(output[0], skip_special_tokens=True)
+    actual_scentence = output
     return actual_scentence
 
 

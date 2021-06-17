@@ -10,10 +10,13 @@ scentence = st.text_input('Input your text here')
 if scentence:
     st.title('Cooking some stuff')
     predictions = fn.get_prediction(scentence)
+    st.write(predictions)
 else:
     st.write('enter the valid text input')
 
-st.write(predictions)
+
+
+
 
 
 
