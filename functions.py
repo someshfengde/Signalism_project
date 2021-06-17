@@ -2,12 +2,12 @@ from transformers import TFGPT2LMHeadModel, GPT2Tokenizer
 # import tensorflow as tf
 
 def get_token(path):
-    load_token = GPT2Tokenizer.from_pretrained(path)
+    load_token = GPT2Tokenizer.from_pretrained("gpt2")
     return load_token
 
 
 def load_model(path):
-    load_model = TFGPT2LMHeadModel.from_pretrained(path)
+    load_model = TFGPT2LMHeadModel.from_pretrained("gpt2")
     # load_model = tf.keras.models.load_model('/model')
     return load_model
 
